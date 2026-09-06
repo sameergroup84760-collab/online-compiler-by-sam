@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Online Compiler By Sam — free online compiler for C, C++, Python, Java, SQL and PHP.">
+<title>Online Compiler By Sam — Free Online Compiler</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#07111f;--panel:#0d1a2b;--panel2:#101f33;--border:#20334d;--text:#eaf2ff;--muted:#8ea3bf;--accent:#5eead4;--accent2:#38bdf8;--danger:#fb7185;--shadow:0 18px 50px rgba(0,0,0,.28)}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 15% 0%,#123253 0,#07111f 35%),var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif}button,select,textarea{font:inherit}.top{height:64px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 24px;background:rgba(7,17,31,.82);backdrop-filter:blur(14px);position:sticky;top:0;z-index:5}.brand{font-weight:800;font-size:20px;letter-spacing:-.5px}.brand span{color:var(--accent)}.nav{display:flex;gap:18px;color:var(--muted);font-size:13px}.wrap{max-width:1250px;margin:auto;padding:22px}.hero{text-align:center;padding:20px 0 26px}.hero h1{font-size:clamp(28px,5vw,48px);margin:10px 0 8px;letter-spacing:-1.5px}.hero p{margin:0;color:var(--muted)}.ad{border:1px dashed #31506f;background:rgba(16,31,51,.55);min-height:76px;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#6f88a5;font-size:11px;letter-spacing:1px;margin:0 0 18px}.toolbar{display:flex;gap:10px;align-items:center;justify-content:space-between;background:var(--panel);border:1px solid var(--border);padding:10px;border-radius:14px 14px 0 0}.controls{display:flex;gap:8px;align-items:center;flex-wrap:wrap}select{background:var(--panel2);color:var(--text);border:1px solid var(--border);padding:10px 12px;border-radius:9px;outline:none}.btn{border:1px solid var(--border);background:var(--panel2);color:var(--text);padding:10px 14px;border-radius:9px;cursor:pointer;font-weight:600}.btn:hover{border-color:#3b5a7e}.run{background:linear-gradient(135deg,#14b8a6,#22c55e);color:#04120f;border:0}.run:disabled{opacity:.55;cursor:wait}.editor{width:100%;min-height:420px;resize:vertical;background:#06101d;color:#dce9fa;border:1px solid var(--border);border-top:0;border-radius:0 0 14px 14px;padding:18px;font:14px/1.6 ui-monospace,SFMono-Regular,Menlo,monospace;outline:none;tab-size:2}.io{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}.box{background:var(--panel);border:1px solid var(--border);border-radius:14px;overflow:hidden}.box h3{font-size:13px;margin:0;padding:12px 14px;border-bottom:1px solid var(--border)}.box textarea,.output{width:100%;min-height:150px;background:#06101d;color:#dce9fa;border:0;padding:14px;resize:vertical;outline:none;font:13px/1.55 ui-monospace,SFMono-Regular,Menlo,monospace}.output{white-space:pre-wrap;overflow:auto}.status{font-size:12px;color:var(--muted);margin-top:8px;min-height:18px}.features{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:24px 0}.feature{background:var(--panel);border:1px solid var(--border);padding:18px;border-radius:14px}.feature b{display:block;margin-bottom:7px}.feature p{color:var(--muted);font-size:13px;line-height:1.5;margin:0}.footer{text-align:center;color:var(--muted);padding:25px;font-size:12px}@media(max-width:700px){.top{padding:0 14px}.nav{display:none}.wrap{padding:14px}.io,.features{grid-template-columns:1fr}.toolbar{align-items:flex-start}.editor{min-height:330px}.hero{padding-top:8px}}
+</style></head>
+<body>
+<header class="top"><div class="brand">Online Compiler <span>By Sam</span></div><nav class="nav"><span>Online Compiler</span><span>Practice</span><span>Tutorials</span></nav></header>
+<main class="wrap">
+<section class="hero"><h1>Code. Run. Learn.</h1><p>Write and execute C, C++, Python, Java, SQL and PHP online.</p></section>
+<div class="ad">ADVERTISEMENT — paste your AdSense ad unit here after approval</div>
+<section>
+<div class="toolbar"><div class="controls"><select id="language" aria-label="Programming language"><option value="c">C</option><option value="cpp">C++</option><option value="python">Python</option><option value="java">Java</option><option value="sql">SQL</option><option value="php">PHP</option></select><button class="btn" id="reset">Reset</button></div><button class="btn run" id="run">▶ Run Code</button></div>
+<textarea id="editor" class="editor" spellcheck="false"></textarea>
+<div class="status" id="status"></div>
+</section>
+<div class="io"><div class="box"><h3>Input / STDIN</h3><textarea id="stdin" placeholder="Enter input for your program here..."></textarea></div><div class="box"><h3>Output</h3><pre id="output" class="output">Click “Run Code” to execute your program.</pre></div></div>
+<div class="ad" style="margin-top:18px">ADVERTISEMENT</div>
+<section class="features"><div class="feature"><b>⚡ Fast execution</b><p>Submit your code to a sandboxed execution service with resource limits.</p></div><div class="feature"><b>🌐 Six languages</b><p>Switch between C, C++, Python, Java, SQL and PHP without leaving the page.</p></div><div class="feature"><b>📱 Mobile friendly</b><p>Use the editor on phones, tablets or desktops.</p></div></section>
+</main><footer class="footer">© 2026 Online Compiler By Sam · Privacy · Terms · Contact</footer>
+<script>
+const samples={
+ c:'#include <stdio.h>\n\nint main() {\n    printf("Hello, Online Compiler By Sam!\\n");\n    return 0;\n}',
+ cpp:'#include <iostream>\nusing namespace std;\n\nint main() {\n    cout << "Hello, Online Compiler By Sam!" << endl;\n    return 0;\n}',
+ python:'print("Hello, Online Compiler By Sam!")',
+ java:'public class Main {\n    public static void main(String[] args) {\n        System.out.println("Hello, Online Compiler By Sam!");\n    }\n}',
+ sql:'CREATE TABLE users (name TEXT);\nINSERT INTO users VALUES (\'Sam\'), (\'Alex\');\nSELECT * FROM users;',
+ php:'<?php\necho "Hello, Online Compiler By Sam!\\n";'
+};
+const lang=document.getElementById('language'),editor=document.getElementById('editor'),stdin=document.getElementById('stdin'),output=document.getElementById('output'),run=document.getElementById('run'),status=document.getElementById('status');
+function loadSample(){editor.value=samples[lang.value];stdin.value='';output.textContent='Click “Run Code” to execute your program.';status.textContent='';editor.focus()}
+lang.addEventListener('change',loadSample);document.getElementById('reset').onclick=loadSample;
+editor.addEventListener('keydown',e=>{if(e.key==='Tab'){e.preventDefault();const s=editor.selectionStart;editor.value=editor.value.slice(0,s)+'  '+editor.value.slice(editor.selectionEnd);editor.selectionStart=editor.selectionEnd=s+2}});
+run.onclick=async()=>{run.disabled=true;status.textContent='Running…';output.textContent='';try{const r=await fetch('/api/run',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({language:lang.value,source_code:editor.value,stdin:stdin.value})});const d=await r.json();if(!r.ok){throw new Error(d.error||'Request failed')}const parts=[];if(d.stdout)parts.push(d.stdout);if(d.stderr)parts.push('STDERR:\n'+d.stderr);if(d.compile_output)parts.push('COMPILER:\n'+d.compile_output);if(d.message)parts.push(d.message);output.textContent=parts.join('\n\n')||'(No output)';status.textContent=d.status?.description||'Finished';}catch(e){output.textContent='Error: '+e.message;status.textContent='Failed';}finally{run.disabled=false}};
+loadSample();
+</script></body></html>
